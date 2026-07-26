@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Quick Hide",
+  "version": "1.0.0",
+  "description": "Быстрое скрытие видео из подписок и рекомендаций YouTube. Нажмите ✕ на миниатюре, чтобы скрыть видео.",
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}

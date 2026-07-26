@@ -1,0 +1,50 @@
+/* ===== YouTube Quick Hide — Кнопка ✕ на миниатюре ===== */
+
+.yt-quick-hide-btn {
+  position: absolute !important;
+  top: 8px !important;
+  right: 8px !important;
+  z-index: 999999 !important;
+  width: 30px !important;
+  height: 30px !important;
+  min-width: 30px !important;
+  min-height: 30px !important;
+  background: rgba(0, 0, 0, 0.85) !important;
+  color: #ffffff !important;
+  border: 2px solid rgba(255, 255, 255, 0.4) !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-family: Arial, sans-serif !important;
+  font-size: 16px !important;
+  font-weight: bold !important;
+  cursor: pointer !important;
+  opacity: 0.9 !important;
+  line-height: 1 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5) !important;
+  backdrop-filter: blur(4px) !important;
+  -webkit-backdrop-filter: blur(4px) !important;
+  pointer-events: auto !important;
+  user-select: none !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3) !important;
+  transition: opacity 0.15s ease, background-color 0.15s ease, transform 0.15s ease !important;
+  outline: none !important;
+  text-decoration: none !important;
+  box-sizing: border-box !important;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+.yt-quick-hide-btn:hover {
+  background: #ff0000 !important;
+  opacity: 1 !important;
+  transform: scale(1.2) !important;
+  box-shadow: 0 3px 12px rgba(255, 0, 0, 0.6) !important;
+}
+
+.yt-quick-hide-btn:active {
+  transform: scale(0.95) !important;
+  background: #cc0000 !important;
+}
