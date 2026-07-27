@@ -1,6 +1,28 @@
 /* ===== YouTube Quick Hide ===== */
 
-/* 1. Shorts (2026): Меню 3 точек — вертикальная колонка (работает отлично) */
+/* 1. Shorts (2026): 2 строки высоты заголовка */
+.shortsLockupViewModelHostOutsideMetadataTitle,
+.shortsLockupViewModelHostMetadataTitle {
+  min-height: 2.6em !important;
+  line-height: 1.3em !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+}
+
+.shortsLockupViewModelHostOutsideMetadata {
+  min-height: 68px !important;
+  height: auto !important;
+  max-height: none !important;
+  overflow: visible !important;
+  width: 100% !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: flex-start !important;
+  box-sizing: border-box !important;
+}
+
+/* 2. Shorts: Меню 3 точек — убираем любую обрезку по высоте (overflow: visible, min-height: 52px) */
 .shortsLockupViewModelHostOutsideMetadataMenu {
   display: flex !important;
   flex-direction: column !important;
@@ -8,9 +30,11 @@
   justify-content: flex-start !important;
   overflow: visible !important;
   height: auto !important;
+  min-height: 52px !important;
   max-height: none !important;
   width: auto !important;
-  gap: 2px !important;
+  gap: 1px !important;
+  padding-bottom: 4px !important;
   z-index: 999999 !important;
 }
 
@@ -25,6 +49,7 @@
   margin: 0 !important;
 }
 
+/* Кнопка ✕ в меню Shorts — компактная 20x20px без обрезки снизу */
 .shortsLockupViewModelHostOutsideMetadataMenu .yt-quick-hide-btn {
   position: relative !important;
   top: auto !important;
@@ -33,12 +58,17 @@
   bottom: auto !important;
   display: inline-flex !important;
   align-self: center !important;
-  margin: 2px 0 0 0 !important;
+  width: 20px !important;
+  height: 20px !important;
+  min-width: 20px !important;
+  min-height: 20px !important;
+  font-size: 10px !important;
+  margin: 1px 0 0 0 !important;
   flex-shrink: 0 !important;
   z-index: 999999 !important;
 }
 
-/* 2. Обычные видео: Контейнеры превью для чистого анкеринга */
+/* 3. Обычные видео: Контейнеры превью */
 ytd-thumbnail,
 #thumbnail,
 .yt-lockup-view-model-wiz__media,
@@ -48,7 +78,7 @@ ytd-thumbnail,
   position: relative !important;
 }
 
-/* 3. Кнопка ✕ для обычных видео — аккуратно в правом верхнем углу превью */
+/* 4. Кнопка ✕ для обычных видео — 24x24px в верхнем правом углу превью */
 .yt-quick-hide-btn {
   position: absolute !important;
   top: 8px !important;
