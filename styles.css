@@ -1,50 +1,101 @@
-/* ===== YouTube Quick Hide — Кнопка ✕ на миниатюре ===== */
+/* ===== YouTube Quick Hide ===== */
 
+/* 1. Shorts (2026): Меню 3 точек — вертикальная колонка (работает отлично) */
+.shortsLockupViewModelHostOutsideMetadataMenu {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  overflow: visible !important;
+  height: auto !important;
+  max-height: none !important;
+  width: auto !important;
+  gap: 2px !important;
+  z-index: 999999 !important;
+}
+
+.shortsLockupViewModelHostOutsideMetadataMenu button,
+.shortsLockupViewModelHostOutsideMetadataMenu yt-icon-button {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+  inset: auto !important;
+  margin: 0 !important;
+}
+
+.shortsLockupViewModelHostOutsideMetadataMenu .yt-quick-hide-btn {
+  position: relative !important;
+  top: auto !important;
+  right: auto !important;
+  left: auto !important;
+  bottom: auto !important;
+  display: inline-flex !important;
+  align-self: center !important;
+  margin: 2px 0 0 0 !important;
+  flex-shrink: 0 !important;
+  z-index: 999999 !important;
+}
+
+/* 2. Обычные видео: Контейнеры превью для чистого анкеринга */
+ytd-thumbnail,
+#thumbnail,
+.yt-lockup-view-model-wiz__media,
+.yt-lockup-view-model-wiz__content-image,
+#media-container,
+#dismissible {
+  position: relative !important;
+}
+
+/* 3. Кнопка ✕ для обычных видео — аккуратно в правом верхнем углу превью */
 .yt-quick-hide-btn {
   position: absolute !important;
   top: 8px !important;
   right: 8px !important;
-  z-index: 999999 !important;
-  width: 30px !important;
-  height: 30px !important;
-  min-width: 30px !important;
-  min-height: 30px !important;
+  z-index: 2147483647 !important;
+  width: 24px !important;
+  height: 24px !important;
+  min-width: 24px !important;
+  min-height: 24px !important;
   background: rgba(0, 0, 0, 0.85) !important;
   color: #ffffff !important;
-  border: 2px solid rgba(255, 255, 255, 0.4) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.6) !important;
   border-radius: 50% !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  font-family: Arial, sans-serif !important;
-  font-size: 16px !important;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  font-size: 12px !important;
   font-weight: bold !important;
   cursor: pointer !important;
-  opacity: 0.9 !important;
-  line-height: 1 !important;
+  opacity: 0.85 !important;
+  line-height: 0 !important;
   padding: 0 !important;
   margin: 0 !important;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5) !important;
+  box-shadow: none !important;
   backdrop-filter: blur(4px) !important;
   -webkit-backdrop-filter: blur(4px) !important;
   pointer-events: auto !important;
   user-select: none !important;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3) !important;
-  transition: opacity 0.15s ease, background-color 0.15s ease, transform 0.15s ease !important;
+  transition: opacity 0.15s ease, transform 0.15s ease, background-color 0.15s ease !important;
   outline: none !important;
-  text-decoration: none !important;
   box-sizing: border-box !important;
+  overflow: visible !important;
   -webkit-font-smoothing: antialiased !important;
 }
 
+/* Подсветка при наведении */
 .yt-quick-hide-btn:hover {
   background: #ff0000 !important;
+  border-color: #ff0000 !important;
   opacity: 1 !important;
-  transform: scale(1.2) !important;
-  box-shadow: 0 3px 12px rgba(255, 0, 0, 0.6) !important;
+  transform: scale(1.15) !important;
+  box-shadow: none !important;
 }
 
 .yt-quick-hide-btn:active {
   transform: scale(0.95) !important;
   background: #cc0000 !important;
+  box-shadow: none !important;
 }
